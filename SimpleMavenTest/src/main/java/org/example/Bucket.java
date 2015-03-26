@@ -15,7 +15,4 @@ public class Bucket {
     public void setCart(boolean cart) {
         this.cart = cart;
     }
-    
-    
-
 }

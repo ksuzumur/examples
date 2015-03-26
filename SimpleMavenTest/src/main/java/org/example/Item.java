@@ -18,9 +18,6 @@ public class Item {
         this.price = price;
     }
 
-//  strengthWeightFactoryClass = WishListSolution.class)
-//@ValueRangeProvider(type = ValueRangeType.FROM_SOLUTION_PROPERTY, solutionProperty = "bucketList")
-
     @PlanningVariable(valueRangeProviderRefs = {"bucketList"})
     public Bucket getBucket() {
         return bucket;

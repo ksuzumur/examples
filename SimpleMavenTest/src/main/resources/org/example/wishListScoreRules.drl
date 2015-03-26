@@ -2,10 +2,6 @@ package org.example;
     dialect "java"
 
 import org.optaplanner.core.api.score.buildin.simple.SimpleScoreHolder;
-//import org.drools.planner.core.score.constraint.UnweightedConstraintOccurrence;
-//import org.drools.planner.core.score.constraint.IntConstraintOccurrence;
-//import org.drools.planner.core.score.constraint.ConstraintType;
-
 import org.example.Item;
 import org.example.Bucket;
 
