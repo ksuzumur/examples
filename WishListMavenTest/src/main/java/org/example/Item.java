@@ -1,7 +1,5 @@
 package org.example;
-import org.apache.commons.lang.builder.EqualsBuilder;
 
-import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 
@@ -10,15 +8,16 @@ public class Item {
     private String name;
     private int price;
     private Bucket bucket;
-    public Item () {
+
+    public Item() {
     }
-            
-    public Item (String name, int price) {
+
+    public Item(String name, int price) {
         this.name = name;
         this.price = price;
     }
 
-    @PlanningVariable(valueRangeProviderRefs = {"bucketList"})
+    @PlanningVariable(valueRangeProviderRefs = { "bucketList" })
     public Bucket getBucket() {
         return bucket;
     }
@@ -42,35 +41,9 @@ public class Item {
     public void setPrice(int price) {
         this.price = price;
     }
-    
+
     public boolean isInCart() {
         return bucket == null ? false : bucket.isCart();
     }
-    
-    public Item clone() {
-        Item clone = new Item();
-        clone.name = name;
-        clone.price = price;
-        clone.bucket = bucket;
-        return clone;
-    }
-    
-    public boolean solutionEquals(Object o) {
-        if (this == o) {
-            return true;
-        } else if (o instanceof Item) {
-            Item other = (Item) o;
-            return new EqualsBuilder()
-                    .append(bucket, other.bucket)
-                    .isEquals();
-        } else {
-            return false;
-        }
-    }
-    
-    public int solutionHashCode() {
-        return new HashCodeBuilder()
-                .append(bucket)
-                .toHashCode();
-    }
+
 }

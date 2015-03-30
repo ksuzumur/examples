@@ -1,4 +1,5 @@
 package org.example;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +10,8 @@ public class WishListSolver {
 
     public static void main(String[] args) {
         // Build the Solver
-        SolverFactory solverFactory = SolverFactory.createFromXmlResource(
-                "org/example/wishListSolverConfig.xml");
+        SolverFactory solverFactory = SolverFactory
+                .createFromXmlResource("org/example/wishListSolverConfig.xml");
         Solver solver = solverFactory.buildSolver();
 
         // setup
@@ -38,14 +39,16 @@ public class WishListSolver {
 
         // Solve the problem
         solver.solve(unsolvedSolution);
-        WishListSolution solvedSolution = (WishListSolution) solver.getBestSolution();
+        WishListSolution solvedSolution = (WishListSolution) solver
+                .getBestSolution();
 
         // Display the result
         System.out.println("============= Best Solution =============");
         int total = 0;
         for (Item item : solvedSolution.getItemList()) {
             if (item.isInCart() == true) {
-                System.out.println(item.getName() + " : price = " + item.getPrice());
+                System.out.println(item.getName() + " : price = "
+                        + item.getPrice());
                 total += item.getPrice();
             }
         }
