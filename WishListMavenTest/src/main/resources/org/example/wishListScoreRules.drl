@@ -19,6 +19,6 @@ rule "calculate score"
             sum($price)
         )
     then
-    	System.out.println("total = " + $total.intValue());
+//    	System.out.println("total = " + $total.intValue());
         scoreHolder.setScore(-Math.abs($total.intValue() - 11000));
 end

@@ -15,7 +15,7 @@
   <!-- Optimization algorithms configuration -->
   <termination>
 <!--     <secondsSpentLimit>1</secondsSpentLimit> -->
-    <millisecondsSpentLimit>100</millisecondsSpentLimit>
+    <millisecondsSpentLimit>1000</millisecondsSpentLimit>
   </termination>
   <constructionHeuristic>
     <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>

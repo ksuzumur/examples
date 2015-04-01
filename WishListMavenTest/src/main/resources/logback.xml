@@ -4,8 +4,8 @@
   <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
       <!-- %l lowers performance -->
-      <!--<pattern>%d [%t] %-5p %l%n  %m%n</pattern>-->
-      <pattern>%d [%t] [%c] %-5p %m%n</pattern>
+      <!--<pattern>%d [%t]  [%c] %-5p %l%n  %m%n</pattern>-->
+      <pattern>%d [%t] %-5p %m%n</pattern>
     </encoder>
   </appender>
   <!--<appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
@@ -23,9 +23,9 @@
     <!--</encoder>-->
   <!--</appender>-->
 
-  <logger name="org.optaplanner" level="info"/>
+  <logger name="org.optaplanner" level="debug"/>
 
-  <root level="info">
+  <root level="debug">
     <appender-ref ref="consoleAppender" />
     <!--<appender-ref ref="fileAppender" />-->
   </root>

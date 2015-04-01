@@ -45,5 +45,9 @@ public class Item {
     public boolean isInCart() {
         return bucket == null ? false : bucket.isCart();
     }
+    
+    public String toString() {
+        return "item:" + name;
+    }
 
 }
