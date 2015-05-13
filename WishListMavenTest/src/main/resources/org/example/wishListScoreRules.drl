@@ -14,7 +14,7 @@ global SimpleScoreHolder scoreHolder;
 rule "calculate score"
         salience -1 // Do the other rules first (optional, for performance)
     when
-        $total : Number() from accumulate(
+        $total : Number(intValue >0 ) from accumulate(
             Item($price : price, inCart == true),
             sum($price)
         )
