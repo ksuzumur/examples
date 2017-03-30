@@ -39,4 +39,17 @@
       <version>${jbpm.version}</version>
     </dependency>
   </dependencies>
+
+  <build>
+  <plugins>
+    <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>exec-maven-plugin</artifactId>
+      <configuration>
+        <mainClass>com.sample.ProcessMain</mainClass>
+      </configuration>
+    </plugin>
+  </plugins>
+  </build>
+  
 </project>
